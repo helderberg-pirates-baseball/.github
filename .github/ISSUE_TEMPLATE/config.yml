@@ -1,0 +1,10 @@
+blank_issues_enabled: true
+issue_template:
+  - "feature-request.yml"
+  - "bug-report.yml"
+  - "security-report.yml"
+  - "chore-request.yml"
+contact_links:
+  - name: "🎊 Helderberg Pirates Baseball Discussions"
+    url: https://github.com/orgs/helderberg-pirates-baseball/discussions
+    about: Please ask and answer questions here.

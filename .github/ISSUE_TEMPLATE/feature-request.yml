@@ -1,0 +1,52 @@
+name: 💡 Feature Request
+description: Suggest a new idea for the project
+title: "feat([SCOPE]): [TITLE]"
+labels: ["enhancement :bulb:", "discuss :speaking_head:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Hey there! 🙋‍♂️
+
+        Thank you for considering this feature request! We'd love to hear your thoughts on it.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Description
+      description: What's this feature all about? Let us know in a few sentences.
+      placeholder: Make this thing do that thing that everybody wants!
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-value
+    attributes:
+      label: Why do we need it? 🤔
+      description: What problem does this feature solve or what opportunity does it unlock? We want to know!
+      placeholder: It would be cool!
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution 💡
+      description: How do you see this feature working? Do you have any ideas for implementation?
+      placeholder: x all the y!
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context 📝
+      description: |
+        Is there anything else you'd like to add that could help us understand your request better?
+
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/chill-viking/.github/blob/df12aa7d73c441721c50c89c5da96b2dc5c45bd7/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

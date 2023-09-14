@@ -1,0 +1,77 @@
+name: 🔒 Security Report
+description: Report a security issue
+title: "fix(SCOPE): [TITLE]"
+labels: ["bug :bug:", "security flaw :space_invader:", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔒 Security Alert!
+
+        Thanks for letting us know about this security issue. We appreciate your help in keeping our project secure.
+
+  - type: textarea
+    id: security-description
+    attributes:
+      label: Description
+      description: Can you describe the security issue and how it was discovered?
+      placeholder: I discovered that it is possible to bypass the login form and access the application without entering a valid username and password. I was able to do this by manipulating the URL and adding a `debug` parameter.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide a clear and concise set of steps to reproduce the security issue.
+      render: shell
+      placeholder: |
+        1. Go to the login page
+        2. Enter the following URL: `https://example.com/login?debug=true`
+        3. Observe that the login form is bypassed and access to the application is granted
+      value: |
+        1.
+        2.
+        3.
+        ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: security-impact
+    attributes:
+      label: Impact
+      description: What is the potential impact of this security issue?
+      placeholder: This security issue allows anyone to access the application without authenticating, which could potentially lead to unauthorized access to sensitive data or actions within the application.
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Do you have any ideas for how to fix this security issue?
+      placeholder: One possible solution would be to add validation to the login form to ensure that a valid username and password are entered before allowing access to the application. Another option would be to disable the `debug` parameter or add additional checks to verify that it is being used appropriately.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Is there any additional context or information that would be helpful in understanding and addressing the security issue?
+
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+      placeholder: I discovered this issue while testing the application and immediately reported it to you.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/chill-viking/.github/blob/df12aa7d73c441721c50c89c5da96b2dc5c45bd7/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

@@ -1,0 +1,50 @@
+name: 🧹 Chore Request
+description: File a non-functional change request
+title: "chore([SCOPE]): [TITLE]"
+labels: ["documentation :writing_hand:", "non-functional improvement :tada:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Let's get things cleaned up
+
+        Thanks for letting us know about this documentation/tool/config issue that needs to be resolved.
+        We appreciate your help in making our project better!
+
+  - type: textarea
+    id: chore-description
+    attributes:
+      label: Description
+      description: Can you describe the change required?
+      placeholder: The documentation for this project is a bit lacking in detail.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample-of-change
+    attributes:
+      label: Sample of Change
+      description: |
+        Do you have any suggestions for this change?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Is there any additional context or information that would be helpful in this change?
+
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/chill-viking/.github/blob/df12aa7d73c441721c50c89c5da96b2dc5c45bd7/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
